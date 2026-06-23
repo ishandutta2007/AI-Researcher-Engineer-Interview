@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d2ff"/>
+      <stop offset="100%" style="stop-color:#7b2ff7"/>
+    </linearGradient>
+    <linearGradient id="accent2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f7971e"/>
+      <stop offset="100%" style="stop-color:#ffd200"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="300" fill="url(#bg)"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.05" stroke="#ffffff" stroke-width="0.5">
+    <line x1="0" y1="50" x2="1200" y2="50"/>
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="250" x2="1200" y2="250"/>
+    <line x1="100" y1="0" x2="100" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="300"/>
+    <line x1="300" y1="0" x2="300" y2="300"/>
+    <line x1="400" y1="0" x2="400" y2="300"/>
+    <line x1="500" y1="0" x2="500" y2="300"/>
+    <line x1="600" y1="0" x2="600" y2="300"/>
+    <line x1="700" y1="0" x2="700" y2="300"/>
+    <line x1="800" y1="0" x2="800" y2="300"/>
+    <line x1="900" y1="0" x2="900" y2="300"/>
+    <line x1="1000" y1="0" x2="1000" y2="300"/>
+    <line x1="1100" y1="0" x2="1100" y2="300"/>
+  </g>
+
+  <!-- Neural network nodes and connections (left side) -->
+  <g filter="url(#softglow)" opacity="0.3">
+    <!-- Layer 1 -->
+    <circle cx="80" cy="60" r="5" fill="#00d2ff"/>
+    <circle cx="80" cy="120" r="5" fill="#00d2ff"/>
+    <circle cx="80" cy="180" r="5" fill="#00d2ff"/>
+    <circle cx="80" cy="240" r="5" fill="#00d2ff"/>
+    <!-- Layer 2 -->
+    <circle cx="170" cy="90" r="5" fill="#7b2ff7"/>
+    <circle cx="170" cy="150" r="5" fill="#7b2ff7"/>
+    <circle cx="170" cy="210" r="5" fill="#7b2ff7"/>
+    <!-- Layer 3 -->
+    <circle cx="260" cy="120" r="5" fill="#f7971e"/>
+    <circle cx="260" cy="180" r="5" fill="#f7971e"/>
+    <!-- Connections L1-L2 -->
+    <line x1="80" y1="60" x2="170" y2="90" stroke="#00d2ff" stroke-width="0.8" opacity="0.5"/>
+    <line x1="80" y1="60" x2="170" y2="150" stroke="#00d2ff" stroke-width="0.8" opacity="0.3"/>
+    <line x1="80" y1="120" x2="170" y2="90" stroke="#00d2ff" stroke-width="0.8" opacity="0.4"/>
+    <line x1="80" y1="120" x2="170" y2="150" stroke="#00d2ff" stroke-width="0.8" opacity="0.5"/>
+    <line x1="80" y1="120" x2="170" y2="210" stroke="#00d2ff" stroke-width="0.8" opacity="0.3"/>
+    <line x1="80" y1="180" x2="170" y2="150" stroke="#00d2ff" stroke-width="0.8" opacity="0.4"/>
+    <line x1="80" y1="180" x2="170" y2="210" stroke="#00d2ff" stroke-width="0.8" opacity="0.5"/>
+    <line x1="80" y1="240" x2="170" y2="210" stroke="#00d2ff" stroke-width="0.8" opacity="0.5"/>
+    <line x1="80" y1="240" x2="170" y2="150" stroke="#00d2ff" stroke-width="0.8" opacity="0.3"/>
+    <!-- Connections L2-L3 -->
+    <line x1="170" y1="90" x2="260" y2="120" stroke="#7b2ff7" stroke-width="0.8" opacity="0.5"/>
+    <line x1="170" y1="90" x2="260" y2="180" stroke="#7b2ff7" stroke-width="0.8" opacity="0.3"/>
+    <line x1="170" y1="150" x2="260" y2="120" stroke="#7b2ff7" stroke-width="0.8" opacity="0.4"/>
+    <line x1="170" y1="150" x2="260" y2="180" stroke="#7b2ff7" stroke-width="0.8" opacity="0.5"/>
+    <line x1="170" y1="210" x2="260" y2="180" stroke="#7b2ff7" stroke-width="0.8" opacity="0.5"/>
+    <line x1="170" y1="210" x2="260" y2="120" stroke="#7b2ff7" stroke-width="0.8" opacity="0.3"/>
+  </g>
+
+  <!-- Neural network nodes and connections (right side, mirrored) -->
+  <g filter="url(#softglow)" opacity="0.3">
+    <circle cx="940" cy="120" r="5" fill="#f7971e"/>
+    <circle cx="940" cy="180" r="5" fill="#f7971e"/>
+    <circle cx="1030" cy="90" r="5" fill="#7b2ff7"/>
+    <circle cx="1030" cy="150" r="5" fill="#7b2ff7"/>
+    <circle cx="1030" cy="210" r="5" fill="#7b2ff7"/>
+    <circle cx="1120" cy="60" r="5" fill="#00d2ff"/>
+    <circle cx="1120" cy="120" r="5" fill="#00d2ff"/>
+    <circle cx="1120" cy="180" r="5" fill="#00d2ff"/>
+    <circle cx="1120" cy="240" r="5" fill="#00d2ff"/>
+    <line x1="940" y1="120" x2="1030" y2="90" stroke="#f7971e" stroke-width="0.8" opacity="0.5"/>
+    <line x1="940" y1="120" x2="1030" y2="150" stroke="#f7971e" stroke-width="0.8" opacity="0.4"/>
+    <line x1="940" y1="180" x2="1030" y2="150" stroke="#f7971e" stroke-width="0.8" opacity="0.5"/>
+    <line x1="940" y1="180" x2="1030" y2="210" stroke="#f7971e" stroke-width="0.8" opacity="0.5"/>
+    <line x1="1030" y1="90" x2="1120" y2="60" stroke="#7b2ff7" stroke-width="0.8" opacity="0.5"/>
+    <line x1="1030" y1="90" x2="1120" y2="120" stroke="#7b2ff7" stroke-width="0.8" opacity="0.4"/>
+    <line x1="1030" y1="150" x2="1120" y2="120" stroke="#7b2ff7" stroke-width="0.8" opacity="0.5"/>
+    <line x1="1030" y1="150" x2="1120" y2="180" stroke="#7b2ff7" stroke-width="0.8" opacity="0.4"/>
+    <line x1="1030" y1="210" x2="1120" y2="180" stroke="#7b2ff7" stroke-width="0.8" opacity="0.5"/>
+    <line x1="1030" y1="210" x2="1120" y2="240" stroke="#7b2ff7" stroke-width="0.8" opacity="0.5"/>
+  </g>
+
+  <!-- Floating particles -->
+  <g opacity="0.15">
+    <circle cx="350" cy="40" r="2" fill="#00d2ff"/>
+    <circle cx="500" cy="270" r="1.5" fill="#7b2ff7"/>
+    <circle cx="700" cy="30" r="2" fill="#ffd200"/>
+    <circle cx="850" cy="260" r="1.5" fill="#00d2ff"/>
+    <circle cx="450" cy="280" r="1" fill="#f7971e"/>
+    <circle cx="750" cy="280" r="2" fill="#7b2ff7"/>
+    <circle cx="380" cy="20" r="1.5" fill="#ffd200"/>
+    <circle cx="620" cy="15" r="1" fill="#00d2ff"/>
+    <circle cx="900" cy="25" r="1.5" fill="#f7971e"/>
+  </g>
+
+  <!-- Brain icon (center-left) -->
+  <g transform="translate(340, 100)" filter="url(#glow)">
+    <path d="M0,40 C0,18 15,0 35,0 C45,0 53,5 58,13 C63,5 73,0 83,0 C103,0 118,18 118,40 C118,55 112,67 103,77 C95,85 75,95 59,100 C43,95 23,85 15,77 C6,67 0,55 0,40Z" fill="none" stroke="url(#accent)" stroke-width="2" opacity="0.6"/>
+    <line x1="59" y1="15" x2="59" y2="95" stroke="url(#accent)" stroke-width="1" opacity="0.4"/>
+    <path d="M59,30 C45,30 30,40 25,55" fill="none" stroke="#00d2ff" stroke-width="1" opacity="0.3"/>
+    <path d="M59,30 C73,30 88,40 93,55" fill="none" stroke="#7b2ff7" stroke-width="1" opacity="0.3"/>
+    <path d="M59,55 C45,55 25,60 20,70" fill="none" stroke="#00d2ff" stroke-width="1" opacity="0.3"/>
+    <path d="M59,55 C73,55 93,60 98,70" fill="none" stroke="#7b2ff7" stroke-width="1" opacity="0.3"/>
+  </g>
+
+  <!-- Main Title -->
+  <text x="600" y="120" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="42" font-weight="700" fill="#ffffff" filter="url(#glow)">
+    AI Researcher &amp; Engineer
+  </text>
+  <text x="600" y="170" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="42" font-weight="700" fill="url(#accent)" filter="url(#glow)">
+    Interview Resources
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="210" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#a0a0c0" letter-spacing="3">
+    THE ULTIMATE CURATED RESOURCE DIRECTORY
+  </text>
+
+  <!-- Decorative line -->
+  <rect x="400" y="228" width="400" height="2" rx="1" fill="url(#accent)" opacity="0.5"/>
+
+  <!-- Tags -->
+  <text x="600" y="260" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#8888aa" letter-spacing="1">
+    ML • DL • NLP • CV • RL • LLMs • GenAI • MLOps • System Design
+  </text>
+</svg>
